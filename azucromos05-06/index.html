@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>pruebas php</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    </head>
+    <body>
+        <div class="tabla_mia">
+            <table id="myTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Columna 1</th>
+                        <th>Columna 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Data 1</td>
+                        <td>Row 2 Data 2</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <div class="el_formulario">
+            <form action="mostrar_tabla.php" method="get">
+                <label>Nombre:</label>
+                <input type="text" name="nombre"><br>
+                <input type="submit">
+            </form>
+        </div>
+        <script>
+            $(document).ready(function(){ $('#myTable').DataTable(); });
+        </script>
+    </body>
+</html>

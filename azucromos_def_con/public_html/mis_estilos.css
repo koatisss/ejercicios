@@ -1,0 +1,30 @@
+
+.logo {
+    
+    font-family: 'Monoton', cursive;
+    font-size: 75px;
+    color: indigo;
+    letter-spacing: 5px
+}
+
+
+.texto_mio {
+    font-size: 36px;
+    font-family: 'Overlock', cursive;
+}
+
+.container_mio {
+    width: 60%;
+    margin: 0 auto;
+    padding: 100px 15px 10px 15px;
+}
+
+#navegacion {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu {
+    width: 20%;
+    float: left;
+}

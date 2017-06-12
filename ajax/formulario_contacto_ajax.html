@@ -1,0 +1,59 @@
+		
+
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>formulario contacto ajax</title>
+	</head>
+
+	<body>
+
+
+	<!--<script>
+            $.ajax({
+                url: 'guardar_contacto_ajax.php',
+		method: 'POST',
+		data: {id:4, pepita:'pepito', anonimo:'Patrocinio'},
+                success: function(respuesta) {
+                    alert(respuesta);
+                }
+            });
+        </script>-->
+
+	     <form>
+		 <label>Contacto</label>
+	      	<input name="contacto" type="text"><br>
+		 <label>Correo Electrónico</label>
+	      	 <input name="email" type="text"><br>
+		 <input type="submit" value="Enviar">
+           </form>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+
+	<script>
+		$('[type="submit"]').on('click', function(e) {alert();
+			e.preventDefault();
+
+		var contacto = $('[name="contacto"]').val();
+		var email = $('[name="email"]').val();
+		var formulario_serializado= $('form').serialize();
+
+		$.ajax ({
+		  url: "guardar_contacto_ajax.php",
+		method:"POST",
+		data: formulario_serializado,
+                success: function() {
+                        alert("¡Formulario enviado OK!");
+                        },
+                error: function() {
+                        alert("Error al enviar el formulario");
+                }
+                });
+           });		
+	</script>
+	</body>
+	</html>
